@@ -1,0 +1,29 @@
+.footer-toolbar {
+    position: fixed !important;;
+    bottom: 0;   
+
+    .footer-details {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .socials {
+            display: flex;
+            gap: 1rem;
+
+            a {
+                display: flex;
+                width: 2rem;
+                max-width: 2.5rem;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
