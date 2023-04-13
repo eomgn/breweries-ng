@@ -8,6 +8,9 @@ import { HomeComponent } from './home.component';
 import { CoreModule } from 'src/app/core/core.module';
 import { ListBreweriesComponent } from './components/list-breweries/list-breweries.component';
 
+// angular material
+import { MatCardModule } from '@angular/material/card';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +21,8 @@ import { ListBreweriesComponent } from './components/list-breweries/list-breweri
     CommonModule,
     CoreModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule
   ],
   exports: [
     HomeComponent,

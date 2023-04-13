@@ -1,6 +1,20 @@
-<ul>
-    <li *ngFor="let item of listBreweries | async"> 
-        {{item.name}}
-        {{item.phone}}
-    </li>
+<ul class="listOfBreweriesDetails">
+    <li *ngFor="let item of listBreweries | async">
+        <mat-card >
+            <mat-card-content >
+                <div class="card">
+                    <h2>{{ item.name }}</h2>
+                    <p>{{ item.address_1 }}</p>
+                    <p>{{ item.city }} {{ item.state }} - {{ item.postal_code }}</p>
+                    <p>{{ item.country }}</p>
+                </div>
+                <div class="cardLineAndButton">
+                    <div class="line"></div>
+                    <div class="button">
+                        <button>{{ item.brewery_type }}</button>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </li> 
 </ul>

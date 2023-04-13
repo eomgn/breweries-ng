@@ -1,0 +1,40 @@
+.listOfBreweriesDetails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    gap: 20px;
+
+        li {
+            mat-card {
+                width: 300px;
+                height: 200px;
+                background-color: #6867675e;
+
+
+                mat-card-content {
+                    padding: 0;
+                    height: 100%;
+
+                        .card{
+                            margin: 30px 15px 0 15px;
+                        }
+
+                        .button {
+                            margin: 8px 0 8px 15px
+                        }
+                
+                        .line {
+                            height: 0.1px;
+                            background-color: rgba(240, 248, 255, 0.378);
+                        }
+
+                        .cardLineAndButton {
+                            position: absolute;
+                            width: 100%;
+                            bottom: 0;
+                        }
+                }
+            }   
+        }
+}

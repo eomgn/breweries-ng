@@ -21,11 +21,6 @@ export class ListBreweriesComponent implements OnInit {
 
 
   ngOnInit(): void {
-    // this.apiService.getData()
-    //   .subscribe(data => {
-    //     this.listBreweries =  data
-    //   })
-
     this.listBreweries = this.apiService.getData();
   }
 }
