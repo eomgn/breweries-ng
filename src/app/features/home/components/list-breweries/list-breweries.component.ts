@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { ApiService } from 'src/app/shared/services/api.service';
 
-import { BreweriesList } from '../interfaces/breweries.model';
+import { BreweriesList } from '../../interfaces/breweries.model';
 import { Observable } from 'rxjs';
+
+
 
 @Component({
   selector: 'app-list-breweries',
@@ -11,16 +13,25 @@ import { Observable } from 'rxjs';
   styleUrls: ['./list-breweries.component.scss']
 })
 export class ListBreweriesComponent implements OnInit {
-
-  listBreweries!: Observable<BreweriesList[]>
-
+  
+  listBreweries!: Observable<BreweriesList[]> 
+   
+  currentPage: number = 1
 
   constructor(
-    private apiService: ApiService
-  ) {}
+    private apiService: ApiService,
+    ) {}
 
 
   ngOnInit(): void {
-    this.listBreweries = this.apiService.getData();
+    this.getData(this.currentPage)
   }
+
+
+  getData(page: number){
+    this.currentPage = page
+    this.listBreweries = this.apiService.getData(page)
+  }
+
+
 }

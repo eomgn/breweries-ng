@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
-import { BreweriesList } from 'src/app/features/home/components/interfaces/breweries.model';
+import { BreweriesList } from 'src/app/features/home/interfaces/breweries.model';
 import { Observable, tap } from 'rxjs';
 
 @Injectable({
@@ -9,14 +9,17 @@ import { Observable, tap } from 'rxjs';
 })
 export class ApiService {
 
-  private readonly urlBase: string = 'https://api.openbrewerydb.org/v1/breweries'
+  private readonly urlBase: string = 'https://api.openbrewerydb.org/v1/breweries?'
 
   constructor(
     private http: HttpClient
   ) { }
 
-  getData(): Observable<BreweriesList[]> {
-    return this.http.get<BreweriesList[]>(this.urlBase)
+  getData(page: number): Observable<BreweriesList[]> {
+    
+    const url = `${this.urlBase}page=${page}&per_page=20&sort=name:asc`
+
+    return this.http.get<BreweriesList[]>(url)
     .pipe(
       tap()
     )

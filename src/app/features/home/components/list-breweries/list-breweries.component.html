@@ -1,20 +1,45 @@
-<ul class="listOfBreweriesDetails">
-    <li *ngFor="let item of listBreweries | async">
-        <mat-card >
-            <mat-card-content >
-                <div class="card">
-                    <h2>{{ item.name }}</h2>
-                    <p>{{ item.address_1 }}</p>
-                    <p>{{ item.city }} {{ item.state }} - {{ item.postal_code }}</p>
-                    <p>{{ item.country }}</p>
-                </div>
-                <div class="cardLineAndButton">
-                    <div class="line"></div>
-                    <div class="button">
-                        <button>{{ item.brewery_type }}</button>
-                    </div>
-                </div>
-            </mat-card-content>
-        </mat-card>
-    </li> 
-</ul>
+<div class="container">
+
+    <section class="cards">
+        <ul class="card">
+            <li *ngFor="let item of listBreweries | async" class="card__item">
+                <a href="">
+                    <mat-card>
+                        <mat-card-content >
+                            <div class="card__item__details">
+                                <h2>{{ item.name }}</h2>
+                                <p>{{ item.address_1 }}</p>
+                                <p>{{ item.city }} {{ item.state }} - {{ item.postal_code }}</p>
+                                <p>{{ item.country }}</p>
+                            </div>
+                            <div class="card__item__details--bottom">
+                                <div class="card__item--line"></div>
+                                <div class="card__item--type">
+                                    <p breweriesType>{{item.brewery_type}}</p>
+                                </div>
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+                </a>    
+            </li> 
+        </ul>
+    </section>
+
+    <div class="paginator">
+        <button
+            [class.active]='currentPage === 1'
+            class="paginator--button" 
+            (click)="getData(1)">1
+        </button>
+        <button
+            [class.active]='currentPage === 2'
+            class="paginator--button"
+            (click)="getData(2)">2
+        </button>
+        <button
+            [class.active]='currentPage === 3'
+            class="paginator--button"
+            (click)="getData(3)">3
+        </button>
+    </div>
+</div>
