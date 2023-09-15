@@ -1,15 +1,25 @@
-<div class="container">
-  <div class="cards">
-    <ng-container *ngFor="let brewrie of brewries">
-      <app-card
-        [nameCard]="brewrie.name"
-        [streetCard]="brewrie.street"
-        [cityCard]="brewrie.city"
-        [stateCard]="brewrie.state"
-        [postalCodeCard]="brewrie.postal_code"
-        [countryCard]="brewrie.country"
-        [typeCard]="brewrie.brewery_type"
-      ></app-card>
-    </ng-container>
+<main>
+  <div class="container">
+    <!-- cards -->
+    <div class="cards">
+      <ng-container *ngFor="let brewrie of brewries">
+        <app-card
+          [nameCard]="brewrie.name"
+          [streetCard]="brewrie.street"
+          [cityCard]="brewrie.city"
+          [stateCard]="brewrie.state"
+          [postalCodeCard]="brewrie.postal_code"
+          [countryCard]="brewrie.country"
+          [typeCard]="brewrie.brewery_type"
+        ></app-card>
+      </ng-container>
+    </div>
+
+    <!-- pagination -->
+    <p-paginator
+      [rows]="10"
+      [totalRecords]="10"
+      [rowsPerPageOptions]="[10, 20, 30]"
+    ></p-paginator>
   </div>
-</div>
+</main>

@@ -7,7 +7,7 @@ import { iBrewery } from '../interface/brewery';
   providedIn: 'root',
 })
 export class BreweriesService extends HttpBaseService {
-  endpoint: string = '';
+  endpoint: string = '?page=1&per_page=16';
 
   constructor(override injector: Injector) {
     super(injector);
