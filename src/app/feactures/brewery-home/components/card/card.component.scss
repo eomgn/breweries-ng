@@ -1,5 +1,24 @@
-.mgn {
-  width: 100px;
-  height: 100px;
-  background: red;
+.p-card {
+  width: "20rem";
+  height: "15rem";
+  box-shadow: "1px 1px 5px gray";
+}
+
+.card_type {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.card_type--text {
+  padding: 0.2rem;
+  margin: 0.2rem;
+
+  width: fit-content;
+
+  background-color: rgb(53, 172, 53);
+  border-radius: 6px;
+
+  color: #fff;
 }

@@ -6,3 +6,17 @@
   box-sizing: border-box;
   font-family: Roboto, sans-serif;
 }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  transform: scale(1.1);
+}
+
+.container {
+  padding: 1.2rem;
+}

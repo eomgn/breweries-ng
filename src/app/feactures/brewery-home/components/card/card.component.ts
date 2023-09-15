@@ -7,7 +7,25 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
   @Input()
-  componentName: string = '';
+  nameCard!: string;
+
+  @Input()
+  streetCard!: string;
+
+  @Input()
+  cityCard!: string;
+
+  @Input()
+  stateCard!: string;
+
+  @Input()
+  postalCodeCard!: string;
+
+  @Input()
+  countryCard!: string;
+
+  @Input()
+  typeCard!: string;
 
   constructor() {}
 

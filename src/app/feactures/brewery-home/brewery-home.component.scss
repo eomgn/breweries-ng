@@ -2,5 +2,13 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
+}
+
+app-card {
+  transition: all 0.2s ease-in-out;
+}
+app-card:hover {
+  // transform: scale(1.1);
+  transform: rotate(-1.5deg) scale(1.1);
 }

@@ -1,5 +1,26 @@
-<p-card
-  [header]="componentName"
-  [style]="{ width: '20rem', height: '15rem', background: 'red' }"
->
-</p-card>
+<a>
+  <p-card
+    [header]="nameCard"
+    [style]="{
+      width: '20rem',
+      height: '15rem',
+      boxShadow: '1px 1px 5px gray',
+      position: 'relative'
+    }"
+  >
+    <!-- content ()-->
+    <div>
+      <p>{{ streetCard }}</p>
+      <p>{{ cityCard }} {{ stateCard }} - {{ postalCodeCard }}</p>
+      <p>{{ countryCard }}</p>
+    </div>
+
+    <!-- footer (brewery type) -->
+    <ng-template pTemplate="footer">
+      <div class="card_type">
+        <hr />
+        <p class="card_type--text" [dBreweryType]="typeCard">{{ typeCard }}</p>
+      </div>
+    </ng-template>
+  </p-card>
+</a>
