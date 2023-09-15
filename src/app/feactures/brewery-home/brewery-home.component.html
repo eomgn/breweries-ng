@@ -1,4 +1,5 @@
-<p>brewery-home works!</p>
-<p *ngFor="let item of brewries">
-  <app-card [componentName]="item.name"></app-card>
-</p>
+<div class="cards">
+  <ng-container *ngFor="let item of brewries">
+    <app-card [componentName]="item.name"></app-card>
+  </ng-container>
+</div>

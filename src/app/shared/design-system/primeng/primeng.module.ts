@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { ToolbarModule } from 'primeng/toolbar';
 import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
 
 @NgModule({
-  imports: [CommonModule, ToolbarModule, ButtonModule],
-  exports: [ToolbarModule, ButtonModule],
+  imports: [CommonModule, ToolbarModule, ButtonModule, CardModule],
+  exports: [ToolbarModule, ButtonModule, CardModule],
 })
 export class PrimengModule {}
