@@ -5,6 +5,7 @@ import { ToolbarModule } from 'primeng/toolbar';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { PaginatorModule } from 'primeng/paginator';
+import { SelectButtonModule } from 'primeng/selectbutton';
 
 @NgModule({
   imports: [
@@ -13,7 +14,14 @@ import { PaginatorModule } from 'primeng/paginator';
     ButtonModule,
     CardModule,
     PaginatorModule,
+    SelectButtonModule,
   ],
-  exports: [ToolbarModule, ButtonModule, CardModule, PaginatorModule],
+  exports: [
+    ToolbarModule,
+    ButtonModule,
+    CardModule,
+    PaginatorModule,
+    SelectButtonModule,
+  ],
 })
 export class PrimengModule {}

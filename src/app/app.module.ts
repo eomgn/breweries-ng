@@ -11,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [

@@ -16,10 +16,13 @@
     </div>
 
     <!-- pagination -->
-    <p-paginator
-      [rows]="10"
-      [totalRecords]="10"
-      [rowsPerPageOptions]="[10, 20, 30]"
-    ></p-paginator>
+    <p-selectButton
+      [options]="paymentOptions"
+      [(ngModel)]="currentPage"
+      optionLabel="name"
+      optionValue="value"
+    ></p-selectButton>
+
+    <p>{{ currentPage }}</p>
   </div>
 </main>

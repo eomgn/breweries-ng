@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { FormsModule } from '@angular/forms';
+
 // routing
 import { BreweryHomeRoutingModule } from './brewery-home-routing.module';
 
@@ -13,6 +15,6 @@ import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [BreweryHomeComponent, CardComponent],
-  imports: [CommonModule, BreweryHomeRoutingModule, SharedModule],
+  imports: [CommonModule, BreweryHomeRoutingModule, SharedModule, FormsModule],
 })
 export class BreweryHomeModule {}
