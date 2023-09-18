@@ -6,6 +6,7 @@ import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { PaginatorModule } from 'primeng/paginator';
 import { SelectButtonModule } from 'primeng/selectbutton';
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { SelectButtonModule } from 'primeng/selectbutton';
     CardModule,
     PaginatorModule,
     SelectButtonModule,
+    DropdownModule,
   ],
   exports: [
     ToolbarModule,
@@ -22,6 +24,7 @@ import { SelectButtonModule } from 'primeng/selectbutton';
     CardModule,
     PaginatorModule,
     SelectButtonModule,
+    DropdownModule,
   ],
 })
 export class PrimengModule {}

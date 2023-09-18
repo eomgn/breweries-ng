@@ -15,26 +15,46 @@ export class BreweryHomeComponent implements OnInit {
 
   paymentOptions!: any[];
 
+  types!: any[];
+  selectedType!: string;
+
   constructor(
     private breweriesService: BreweriesService,
     private primeNGConfig: PrimeNGConfig
   ) {
-    // paginator to primeng
+    // paginator from primeng
     this.paymentOptions = [
       { name: '1', value: 1 },
       { name: '2', value: 2 },
       { name: '3', value: 3 },
     ];
+
+    // selected from primeng
+    this.types = [
+      { name: 'micro' },
+      { name: 'nano' },
+      { name: 'regional' },
+      { name: 'brewpub' },
+      { name: 'large' },
+      { name: 'planning' },
+      { name: 'bar' },
+      { name: 'contract' },
+      { name: 'proprietor' },
+      { name: 'closed' },
+    ];
   }
 
   ngOnInit(): void {
-    this.getBreweriesList();
+    // primeng
     this.primeNGConfig.ripple = true;
+    this.getBreweriesList();
   }
 
   getBreweriesList() {
-    this.breweriesService.getBreweries(this.currentPage).subscribe((result) => {
-      this.brewries = result;
-    });
+    this.breweriesService
+      .getBreweries(this.currentPage, this.selectedType)
+      .subscribe((result) => {
+        this.brewries = result;
+      });
   }
 }

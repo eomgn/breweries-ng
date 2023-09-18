@@ -1,5 +1,18 @@
 <main>
   <div class="container">
+    <!-- select of type -->
+    <div class="filter">
+      <p-dropdown
+        [options]="types"
+        [(ngModel)]="selectedType"
+        optionLabel="name"
+        optionValue="name"
+        placeholder="Selecionar tipo"
+        [ngModelOptions]="{ standalone: true }"
+        (ngModelChange)="getBreweriesList()"
+      ></p-dropdown>
+    </div>
+
     <!-- cards -->
     <div class="cards">
       <ng-container *ngFor="let brewrie of brewries">

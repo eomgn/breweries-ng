@@ -11,9 +11,15 @@ export class BreweriesService extends HttpBaseService {
     super(injector);
   }
 
-  getBreweries(currentPage: any): Observable<iBrewery[]> {
-    let endpoint: string = `?page=${currentPage}&per_page=16`;
+  getBreweries(currentPage: number, type?: string): Observable<iBrewery[]> {
+    if (type == null) {
+      let endpoint: string = `?page=${currentPage}&per_page=25`;
 
-    return this.httpGet(endpoint);
+      return this.httpGet(endpoint);
+    } else {
+      let endpoint: string = `?page=${currentPage}&per_page=25&by_type=${type}`;
+
+      return this.httpGet(endpoint);
+    }
   }
 }
