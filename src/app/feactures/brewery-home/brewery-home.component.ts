@@ -9,11 +9,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./brewery-home.component.scss'],
 })
 export class BreweryHomeComponent implements OnInit {
-  endpoint: string = '?page=2&per_page=16';
-
   brewries!: iBrewerys;
 
-  currentPage!: number;
+  currentPage: number = 1;
 
   paymentOptions!: any[];
 
@@ -21,6 +19,7 @@ export class BreweryHomeComponent implements OnInit {
     private breweriesService: BreweriesService,
     private primeNGConfig: PrimeNGConfig
   ) {
+    // paginator to primeng
     this.paymentOptions = [
       { name: '1', value: 1 },
       { name: '2', value: 2 },
@@ -33,12 +32,8 @@ export class BreweryHomeComponent implements OnInit {
     this.primeNGConfig.ripple = true;
   }
 
-  ngOnChanges() {
-    console.log(this.currentPage);
-  }
-
   getBreweriesList() {
-    this.breweriesService.getBreweries().subscribe((result) => {
+    this.breweriesService.getBreweries(this.currentPage).subscribe((result) => {
       this.brewries = result;
     });
   }

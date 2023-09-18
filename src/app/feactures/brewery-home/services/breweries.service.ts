@@ -7,13 +7,13 @@ import { iBrewery } from '../interface/brewery';
   providedIn: 'root',
 })
 export class BreweriesService extends HttpBaseService {
-  endpoint: string = '?page=1&per_page=16';
-
   constructor(override injector: Injector) {
     super(injector);
   }
 
-  getBreweries(): Observable<iBrewery[]> {
-    return this.httpGet(this.endpoint);
+  getBreweries(currentPage: any): Observable<iBrewery[]> {
+    let endpoint: string = `?page=${currentPage}&per_page=16`;
+
+    return this.httpGet(endpoint);
   }
 }

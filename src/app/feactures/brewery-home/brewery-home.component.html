@@ -16,13 +16,15 @@
     </div>
 
     <!-- pagination -->
-    <p-selectButton
-      [options]="paymentOptions"
-      [(ngModel)]="currentPage"
-      optionLabel="name"
-      optionValue="value"
-    ></p-selectButton>
 
-    <p>{{ currentPage }}</p>
+    <div class="paginator">
+      <p-selectButton
+        (click)="getBreweriesList()"
+        [options]="paymentOptions"
+        [(ngModel)]="currentPage"
+        optionLabel="name"
+        optionValue="value"
+      ></p-selectButton>
+    </div>
   </div>
 </main>

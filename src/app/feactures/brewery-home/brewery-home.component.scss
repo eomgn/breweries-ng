@@ -12,3 +12,10 @@ app-card:hover {
   // transform: scale(1.1);
   transform: rotate(-1.5deg) scale(1.1);
 }
+
+.paginator {
+  margin: 2rem;
+
+  display: flex;
+  justify-content: center;
+}
