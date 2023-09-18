@@ -10,13 +10,26 @@
         placeholder="Selecionar tipo"
         [ngModelOptions]="{ standalone: true }"
         (ngModelChange)="getBreweriesList()"
-      ></p-dropdown>
+        optionLabel="name"
+        filterBy="name"
+        [showClear]="true"
+      >
+        <ng-template pTemplate="filter" let-options="options">
+          <button
+            pButton
+            icon="pi pi-times"
+            class="ml-3"
+            (click)="myResetFunction(options)"
+          ></button>
+        </ng-template>
+      </p-dropdown>
     </div>
 
     <!-- cards -->
     <div class="cards">
       <ng-container *ngFor="let brewrie of brewries">
         <app-card
+          [routerLink]="['details', brewrie.id]"
           [nameCard]="brewrie.name"
           [streetCard]="brewrie.street"
           [cityCard]="brewrie.city"

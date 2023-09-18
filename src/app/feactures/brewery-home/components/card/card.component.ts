@@ -1,4 +1,7 @@
+import { iBrewery, iBrewerys } from '../../interface/brewery';
 import { Component, Input, OnInit } from '@angular/core';
+import { BreweriesService } from '../../services/breweries.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-card',

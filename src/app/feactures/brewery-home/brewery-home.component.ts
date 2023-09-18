@@ -2,6 +2,7 @@ import { PrimeNGConfig } from 'primeng/api';
 import { iBrewerys } from './interface/brewery';
 import { BreweriesService } from './services/breweries.service';
 import { Component, OnInit } from '@angular/core';
+import { DropdownFilterOptions } from 'primeng/dropdown';
 
 @Component({
   selector: 'app-brewery-home',
@@ -17,6 +18,8 @@ export class BreweryHomeComponent implements OnInit {
 
   types!: any[];
   selectedType!: string;
+
+  filterValue = '';
 
   constructor(
     private breweriesService: BreweriesService,
@@ -56,5 +59,10 @@ export class BreweryHomeComponent implements OnInit {
       .subscribe((result) => {
         this.brewries = result;
       });
+  }
+
+  myResetFunction(options: DropdownFilterOptions) {
+    options.reset;
+    this.selectedType = '';
   }
 }
