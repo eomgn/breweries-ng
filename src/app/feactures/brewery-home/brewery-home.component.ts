@@ -16,9 +16,10 @@ export class BreweryHomeComponent implements OnInit {
 
   paymentOptions!: any[];
 
+  loading!: boolean;
+
   types!: any[];
   selectedType!: string;
-
   filterValue = '';
 
   constructor(
@@ -49,8 +50,10 @@ export class BreweryHomeComponent implements OnInit {
 
   ngOnInit(): void {
     // primeng
-    this.primeNGConfig.ripple = true;
+
     this.getBreweriesList();
+
+    this.primeNGConfig.ripple = true;
   }
 
   getBreweriesList() {

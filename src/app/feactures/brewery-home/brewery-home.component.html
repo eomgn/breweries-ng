@@ -1,5 +1,8 @@
 <main>
-  <div class="container">
+  <!-- progress bar  -->
+  <p-progressBar mode="indeterminate" *ngIf="loading"></p-progressBar>
+
+  <div class="container" *ngIf="!loading">
     <!-- select of type -->
     <div class="filter">
       <p-dropdown
