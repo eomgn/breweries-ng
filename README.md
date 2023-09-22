@@ -1,27 +1,43 @@
-# Brewery
+<h1 align="center">Open Brewery</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-redes">Redes</a>
+</p>
 
-## Development server
+  <img style="border-radius: 5px" alt="imagem do Projeto" src="./src/assets/gif/gif.gif" width="100%">
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## 🚀 Tecnologias
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-## Build
+- Angular
+- Typescript
+- PrimeNG
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 💻 Projeto
 
-## Running unit tests
+O projeto consiste em uma rota com três páginas com uma lista de cartões com todas as cervejarias e algumas de suas propriedades. Ao executar a ação de clique em algum dos cartões, é direcionado para uma rota onde terá mais propriedades da respectiva cervejaria. Foi utilizado um dos conceitos do SOLID, que é a inversão de dependência, ao qual gostei bastante de trabalhar.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Conceitos abordados:
 
-## Running end-to-end tests
+- Componentização front-end
+- Criar componentes dinâmicos que recebem parâmetros
+- Inversão de dependência
+- Services
+- Diretivas
+- Rotas
+- Lazy Loading
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+## 🔗 Redes
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Estas são minhas redes sociais. Sinta-se a vontade para mandar uma mensagem.
+
+- [Linkedin](https://www.linkedin.com/in/eomgn/)
+- [Instagram](https://www.instagram.com/matheuzngr/)
+- [Twitter](https://twitter.com/eomgn)
