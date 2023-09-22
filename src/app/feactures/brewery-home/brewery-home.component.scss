@@ -1,5 +1,6 @@
 .container {
   padding: 0 1.2rem 1.2rem 1.2rem;
+  // animation: spin-top 0.7s 0.4s backwards;
 
   .filter {
     margin: 2rem;
@@ -17,6 +18,7 @@
 
   app-card {
     transition: all 0.2s ease-in-out;
+    animation: spin-top 0.5s 0.3s backwards;
   }
   app-card:hover {
     // transform: scale(1.1);

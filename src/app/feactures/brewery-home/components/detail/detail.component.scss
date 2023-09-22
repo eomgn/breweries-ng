@@ -1,0 +1,11 @@
+.container {
+  animation: spin-left 0.7s 0.4s backwards;
+
+  .details {
+    margin-top: 2rem;
+
+    ul > li {
+      list-style-position: inside;
+    }
+  }
+}

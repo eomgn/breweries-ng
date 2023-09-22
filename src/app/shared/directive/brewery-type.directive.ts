@@ -5,32 +5,11 @@ import { Directive, ElementRef, Input, Renderer2 } from '@angular/core';
   inputs: ['dBreweryType'],
 })
 export class BreweryTypeDirective {
-  // constructor(private elementRef: ElementRef, private renderer: Renderer2) {
-  // this.renderer.setStyle(this.elementRef.nativeElement, 'background', 'red');
-
-  // if (this.elementRef.nativeElement.innerText.trim() === 'micro') {
-  //   console.log('funcionou');
-  //   this.renderer.setStyle(
-  //     this.elementRef.nativeElement,
-  //     'background',
-  //     'red'
-  //   );
-  // }
-
-  // console.log(this.elementRef);
-
   @Input() dBreweryType!: string;
 
   constructor(private elementRef: ElementRef, private renderer: Renderer2) {}
 
   ngOnInit() {
-    // if (this.dBreweryType === 'micro') {
-    //   this.renderer.setStyle(
-    //     this.elementRef.nativeElement,
-    //     'background',
-    //     'red'
-    //   );
-
     this.breweryTypeColor();
   }
 
@@ -48,7 +27,7 @@ export class BreweryTypeDirective {
         this.renderer.setStyle(
           this.elementRef.nativeElement,
           'background',
-          '#fff'
+          '#bbb'
         );
         break;
 

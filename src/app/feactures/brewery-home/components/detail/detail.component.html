@@ -1,0 +1,41 @@
+<main>
+  <div class="container">
+    <!-- button back -->
+
+    <button
+      pButton
+      icon="pi pi-arrow-circle-left"
+      iconPos="left"
+      label="Back"
+      (click)="backToCards()"
+    ></button>
+
+    <div class="details">
+      <p-fieldset [legend]="brewerie.name">
+        <ul>
+          <li><strong>Type: </strong>{{ brewerie.brewery_type }}</li>
+          <li><strong>Street: </strong>{{ brewerie.street }}</li>
+          <li><strong>City: </strong>{{ brewerie.city }}</li>
+          <li><strong>State: </strong>{{ brewerie.state }}</li>
+          <li><strong>Postal code: </strong>{{ brewerie.postal_code }}</li>
+          <li><strong>Country: </strong>{{ brewerie.country }}</li>
+          <li>
+            <strong>Website: </strong>
+            <a [href]="brewerie.website_url">{{ brewerie.website_url }}</a>
+          </li>
+          <li><strong>Phone: </strong>{{ brewerie.phone }}</li>
+          <li>
+            <strong>Open in maps: </strong>
+            <a
+              target="_blank"
+              href="https://www.google.com/search?q={{ brewerie.latitude }}%2C{{
+                brewerie.longitude
+              }}&sca_esv=566347325&sxsrf=AM9HkKljV7xAgvvAo8doCjCXv6ilGM1aeA%3A1695062136552&ei=eJgIZeGvIaSW0Abs4qyYBQ&ved=0ahUKEwjhy5XE5rSBAxUkC9QKHWwxC1MQ4dUDCBA&uact=5&oq=35.25738891%2C-97.46818222&gs_lp=Egxnd3Mtd2l6LXNlcnAiGDM1LjI1NzM4ODkxLC05Ny40NjgxODIyMkjTD1AAWOIMcAB4AJABAJgBtQGgAdAGqgEDMC41uAEDyAEA-AEB-AECwgIEECMYJ-IDBBgAIEGIBgE&sclient=gws-wiz-serp"
+              >{{ brewerie.latitude }}, {{ brewerie.longitude }}
+            </a>
+          </li>
+        </ul>
+      </p-fieldset>
+    </div>
+  </div>
+</main>

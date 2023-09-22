@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs';
 import { Injectable, Injector } from '@angular/core';
 import { HttpBaseService } from 'src/app/shared/service/http-base.service';
-import { iBrewery } from '../interface/brewery';
+import { iBrewery, iBrewerys } from '../interface/brewery';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +11,7 @@ export class BreweriesService extends HttpBaseService {
     super(injector);
   }
 
-  getBreweries(currentPage: number, type?: string): Observable<iBrewery[]> {
+  getBreweries(currentPage: number, type?: string): Observable<iBrewerys> {
     if (type == null) {
       let endpoint: string = `?page=${currentPage}&per_page=25`;
 
@@ -21,5 +21,9 @@ export class BreweriesService extends HttpBaseService {
 
       return this.httpGet(endpoint);
     }
+  }
+
+  getBrewerieById(id: string): Observable<iBrewery> {
+    return this.httpGet(id);
   }
 }
