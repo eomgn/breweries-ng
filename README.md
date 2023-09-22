@@ -22,10 +22,10 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O projeto consiste em uma rota com três páginas com uma lista de cartões com todas as cervejarias e algumas de suas propriedades. Ao executar a ação de clique em algum dos cartões, é direcionado para uma rota onde terá mais propriedades da respectiva cervejaria. Foi utilizado um dos conceitos do SOLID, que é a inversão de dependência, ao qual gostei bastante de trabalhar.
 
-Conceitos abordados:
+Utilizado:
 
 - Componentização front-end
-- Criar componentes dinâmicos que recebem parâmetros
+- Componentes dinâmicos que recebem parâmetros
 - Inversão de dependência
 - Services
 - Diretivas
